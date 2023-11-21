@@ -1,23 +1,22 @@
-print("Welcome to the Disney Park")
-height = int(input("What's your height in cm? "))
+print("Welcome to JR | Pizza")
+size = input("What size pizza do you want? S, M or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
 bill = 0
 
-if height > 150:
-  print("You can get into this park!")
-  age = int(input("What's your age? "))
-  if age < 12:
-    bill = 3
-    print("Child ticket is 3$")
-  elif age < 18:
-    bill = 5
-    print("Youth tickets are 5$")
-  else:
-    bill = 7
-    print("Adult tickets are 7$")
-  print("The photo is 3$")
-  want_photo = input("Do you wanna photo to memorise? Type Y or N")
-  if want_photo == "Y":
-    bill += 3
-    print(f"Your total bill is {bill}")
+if size == "S":
+  bill += 15
+elif size == "M":
+  bill += 20
 else:
-  print("Sorry, we can't to access you")
+  bill += 25
+
+if add_pepperoni == "Y":
+  if size == "S":
+    bill += 2
+  else:
+    bill += 3
+if extra_cheese == "Y":
+  bill += 1
+  
+print(f"Your final bill is {bill}")
