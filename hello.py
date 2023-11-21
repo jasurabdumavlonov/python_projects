@@ -1,22 +1,27 @@
-print("Welcome to JR | Pizza")
-size = input("What size pizza do you want? S, M or L ")
-add_pepperoni = input("Do you want pepperoni? Y or N ")
-extra_cheese = input("Do you want extra cheese? Y or N ")
-bill = 0
+print("True Love calculator")
+name1 = input("What's your name? ")
+name2 = input("What's her name? ")
 
-if size == "S":
-  bill += 15
-elif size == "M":
-  bill += 20
+combined_string = name1 + name2
+lowercase_string = combined_string.lower()
+
+t = lowercase_string.count("t")
+r = lowercase_string.count("r")
+u = lowercase_string.count("u")
+e = lowercase_string.count("e")
+
+true = t + r + u + e
+
+l = lowercase_string.count("l")
+o = lowercase_string.count("o")
+v = lowercase_string.count("v")
+e = lowercase_string.count("e")
+love = l + o + v + e
+
+love_score = int(str(true) + str(love))
+if (love_score < 10) or (love_score > 90):
+  print(f"Your love score is {love_score}, you go together like cokes and mentos")
+elif(love_score > 40 and love_score < 50):
+  print(f"Your score is {love_score}, you are alright together")
 else:
-  bill += 25
-
-if add_pepperoni == "Y":
-  if size == "S":
-    bill += 2
-  else:
-    bill += 3
-if extra_cheese == "Y":
-  bill += 1
-  
-print(f"Your final bill is {bill}")
+  print(f"Your score is {love_score}")
