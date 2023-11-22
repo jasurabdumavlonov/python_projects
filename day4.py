@@ -1,12 +1,16 @@
-import random
+row1 = [" ", " ", " "]
+row2 = [" ", " ", " "]
+row3 = [" ", " ", " "]
 
-name_string = input("Gimme everybody's names,seperated by a comma. ")
-splitted = name_string.split(', ')
+map = [row1, row2, row3]
 
-name = random.choice(splitted)
-print(f"{name} is going to buy a meal today!")
+print(f"{row1}\n{row2}\n{row3}")
 
-# ran = random.randint(0,len(splitted)-1)
-# name = splitted[ran]
-# print(name)
+position = input("Where do you want to put the treasure? ")
+
+horizontal = int(position[0])
+vertical = int(position[1])
+map[vertical - 1][horizontal - 1] = "X"
+
+print(f"{row1}\n{row2}\n{row3}")
 
